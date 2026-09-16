@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f6f3ea;
+  }
+  ::selection {
+    background-color: #2f5d50;
+    color: #f6f3ea;
+  }
+}
+
+@layer components {
+  .citation-mark {
+    @apply font-mono text-xs text-brass tracking-tight;
+  }
+}

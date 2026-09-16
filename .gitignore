@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+env/
+venv/
+.venv/
+*.egg-info/
+
+# Backend runtime files (secrets, local DB, generated tokens)
+backend/.env
+backend/*.db
+backend/credentials.json
+backend/token.json
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
