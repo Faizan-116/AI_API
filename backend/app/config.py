@@ -8,7 +8,12 @@ class Settings(BaseSettings):
     # General
     app_name: str = "Lecturer Portfolio API"
     environment: str = "development"
+    # Comma-separated list of allowed frontend origins (e.g. local dev + production)
     frontend_origin: str = "http://localhost:5173"
+
+    @property
+    def frontend_origins(self) -> list[str]:
+        return [origin.strip() for origin in self.frontend_origin.split(",") if origin.strip()]
 
     # Database
     database_url: str = "sqlite:///./portfolio.db"
